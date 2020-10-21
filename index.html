@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!--Required meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Styles-->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index-style.css">
+
+    <!--Title-->
+    <title>Add Event</title>
+
+  </head>
+  <body>
+    <div class="container py-4">
+
+      <ul class="nav nav-tabs  d-flex align-items-center  justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item " role="presentation">
+          <a class="nav-link active" id="home-tab" data-toggle="tab"
+          href="#event" role="tab" aria-controls="event" aria-selected="true">
+            <i class="fal fa-calendar-edit"></i> Event
+          </a>
+        </li>
+        <li class="nav-item " role="presentation">
+          <a class="nav-link " id="ticket-tab"  data-toggle="tab"
+          href="#ticket" role="tab" aria-controls="ticket" aria-selected="false">
+            <i class="fad fa-ticket"></i> Ticket Price
+          </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="buy-tab"  data-toggle="tab"
+          href="#final" role="tab" aria-controls="final" aria-selected="false">
+            <i class="fad fa-ticket"></i> Buy Tickets
+          </a>
+        </li>
+      </ul>
+      
+      
+      
+      
+      <div class="tab-content" id="myTabContent">
+
+        <!--First Step-->
+        <div class="overflow-auto tab-pane fade show active p-2" id="event" role="tabpanel" aria-labelledby="home-tab">
+
+          <div id='eventCover' class="position-relative">
+            <div class="drop-zone">
+              <p class="m-0">
+                <i class="fas fa-3x fa-cloud-upload"></i>
+              </p>
+              <div>Upload Event Cover</div>
+              <span class="drop-zone__prompt ">Drag and drop or Browse</span>
+              <input type="file" name="myFile" class="drop-zone__input">
+            </div>
+            <p class="error position-absolute"></p>
+          </div>
+
+          <div class="mt-4 basicInfo">
+            
+            <div class="eventName position-relative">
+              <input name="event-name" class="border-0 text-center" type="text" placeholder="Enter Event Name">
+              <p class="error position-absolute w-100 "></p>
+            </div>
+            
+            <div class="eventMeta">
+              <div class="row d-flex  align-items-center flex-wrap">
+                
+                <div class="col-lg-8">
+                  
+                  <div class="key text-uppercase">Hosted by</div>
+                  <div class="value mb-4">
+                    <a>From Back-End</a>
+                  </div>
+                  
+                  <div class="key text-uppercase">Location</div>
+                  <div class="value eventLocation mb-2 position-relative">
+                    <input name="event-location" class="border-0 text-center mt-1" type="text" placeholder="Enter Event Location">
+                    <p class="error position-absolute  "></p>
+                  </div>
+                  
+                  
+                </div>
+                
+                <div class="col-lg-4">
+
+                  <div class="key text-uppercase">START DATE</div>
+                  <div class="value eventStart mb-4 position-relative">
+                    <input name="event-start" class="border-0 text-center  mt-1" type="date" placeholder=" Event Start Date">
+                    <p class="error position-absolute  "></p>
+                  </div>
+                  
+                  <div class="key text-uppercase ">END DATE</div>
+                  <div class="value eventEnd mb-2 position-relative">
+                    <input name="event-end" class="border-0 text-center  mt-1" type="date" placeholder="Event End Date">
+                    <p class="error position-absolute  "></p>
+                  </div>
+                  
+                  
+                </div>
+
+              </div>
+            </div>
+            
+            <div class="line mt-5"></div>
+            
+            <div class="eventDesc mt-3  p-3 position-relative">
+              <div class="d-flex align-items-center">
+                <span></span>
+                <h4 class="m-0">Description</h4>
+              </div>
+              <textarea class="mt-2 bg-light p-1 form-control " name="event-desc" rows="1" cols="50"></textarea>
+              <p class="error position-absolute  "></p>
+            </div>
+            
+          </div>          
+
+          <button id="next" class="btn mr-3 mb-3 btn-primary text-center text-uppercase float-right">Save and continue</button>
+          
+        </div>
+        
+
+        <!--Second Step-->
+        <div class="tab-pane fade p-2 " id="ticket" role="tabpanel" aria-labelledby="profile-tab">
+        </div>
+
+
+        <!--Final Step-->
+        <div class="tab-pane fade p-2 " id="final" role="tabpanel" aria-labelledby="profile-tab">
+        </div>
+
+      </div>
+      
+    </div>
+      <!--Scripts-->
+      <script src="js/jquery-3.5.0.min.js"></script> 
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/index.js"></script>
+
+
+  </body>
+</html>
